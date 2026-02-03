@@ -27,11 +27,11 @@ DEF_FORMAT = "480"
 from dotenv import load_dotenv
 load_dotenv()
 os.makedirs("./downloads", exist_ok=True)
-API_ID = 24119778
-API_HASH = "cca11ca97dd8683d65ca1beb62baceb1"
-BOT_TOKEN = "7208534557:AAH9zDoXCjMJkm8ahqsJTsljAzbeSe20Xic"
-AUTH_USERS = 7171191819
-sudo_users = [7171191819]
+API_ID = 22837269
+API_HASH = "86737b9633320c818d029736dd07660b"
+BOT_TOKEN = "8492539241:AAH-LHWeucOBybzVmMss_Jh4mrRAIS2XD7c"
+AUTH_USERS = 7212452634
+sudo_users = [7212452634,7666586022]
 STRING = "AQFwCeIAOz1FS7JecfYU8zMZdNCoey8c3cbpOlG0CmPPY9mXBXyG2C0_Uf83cWS_dI38I16qpCyuggIpwc2LrcYQtUXEbyjxtfRWl3jif61NDbq95dMqvSLJkYz6xGaPas5qCfMubSwdkxgaFc_ejU1A5Fglp4RsPKnH_G4OjF_wEUAzNiWn0PhTVlUT-au6thdjfR-hsPvGUnksl4bTRb4BfR0cFsh0X8Tg14_KGJRMBGUN2URG1PO1ATGpiFDPmUDFco2SwQIW6VadpUUROTUD70z0SnAvQ7aZMD7MvpovTdHO8YJVu0GiMT5qJZKtNGHUzKj4rdxiKdHoA0_9z5h2pIR20QAAAAGrb7QLAA"
 bot = Client(
     "bot",
@@ -54,7 +54,7 @@ async def exec(cmd):
 async def account_login(bot: Client, m: Message):
  editable = await m.reply_text("**Hi BOSS I'm Alive Send /down download and for classplus send /cpd  for /dhurina for /vision**")
 
-@bot.on_message(filters.command(["down"]))
+@bot.on_message(filters.command(["ram"]))
 async def account_login(bot: Client, m: Message):
     global cancel
     cancel = False
@@ -78,13 +78,13 @@ async def account_login(bot: Client, m: Message):
         await m.reply_text("Invalid file input.")
         os.remove(x)
         return
-    editable = await m.reply_text(f"Total links found are **{len(links)}**\n\nSend From where you want to download initial is **0**")
+    editable = await m.reply_text(f"Total links found are **{len(links)}**\n\nSend From where you want to download initial is **1**")
     input1: Message = await bot.listen(editable.chat.id)
     raw_text = input1.text
     try:
         arg = int(raw_text)
     except:
-        arg = 0
+        arg = 1
     editable = await editable.edit("**Enter Batch Name**")
     input01: Message = await bot.listen(editable.chat.id)
     mm = input01.text    
@@ -220,7 +220,7 @@ async def account_login(bot: Client, m: Message):
         return
 
     editable = await m.reply_text(
-        f"Total links found are **{len(links)}**\n\nSend From where you want to download initial is **0**"
+        f"Total links found are **{len(links)}**\n\nSend From where you want to download initial is **1**"
     )
     input1: Message = await bot.listen(editable.chat.id)
     raw_text = input1.text
@@ -228,7 +228,7 @@ async def account_login(bot: Client, m: Message):
     try:
         arg = int(raw_text)
     except:
-        arg = 0
+        arg = 1
 
     editable = await m.reply_text("**Enter Title**")
     input0: Message = await bot.listen(editable.chat.id)
@@ -239,7 +239,7 @@ async def account_login(bot: Client, m: Message):
     raw_text2 = input2.text
 
     editable4 = await m.reply_text(
-        "Now send the **Thumb url**\nEg : ```https://telegra.ph/file/d9e24878bd4aba05049a1.jpg```\n\nor Send **no**"
+        "Now send the **Thumb url**\nEg : ````\n\nor Send **no**"
     )
     input6 = message = await bot.listen(editable.chat.id)
     raw_text6 = input6.text
@@ -571,7 +571,7 @@ async def account_login(bot: Client, m: Message):
         return
 
     editable = await m.reply_text(
-        f"Total links found are **{len(links)}**\n\nSend From where you want to download initial is **0**"
+        f"Total links found are **{len(links)}**\n\nSend From where you want to download initial is **1**"
     )
     input1: Message = await bot.listen(editable.chat.id)
     raw_text = input1.text
@@ -579,7 +579,7 @@ async def account_login(bot: Client, m: Message):
     try:
         arg = int(raw_text)
     except:
-        arg = 0
+        arg = 1
 
     editable = await m.reply_text("**Enter Title**")
     input0: Message = await bot.listen(editable.chat.id)
@@ -590,7 +590,7 @@ async def account_login(bot: Client, m: Message):
     raw_text2 = input2.text
 
     editable4 = await m.reply_text(
-        "Now send the **Thumb url**\nEg : ```https://telegra.ph/file/d9e24878bd4aba05049a1.jpg```\n\nor Send **no**"
+        "Now send the **Thumb url**\nEg : `````\n\nor Send **no**"
     )
     input6 = message = await bot.listen(editable.chat.id)
     raw_text6 = input6.text
